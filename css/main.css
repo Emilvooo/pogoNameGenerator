@@ -1,13 +1,19 @@
-.form-control:focus {
-    border-color: #3498db;
+.container {
+    margin-top: 1rem;
 }
 
-.panel-title-heading {
-    padding: 0 0 20px 0 !important;
+.btn {
+    margin-bottom: 1rem;
 }
 
-.img-thumbnail {
-    margin-right: 10px !important;
-    height: 150px !important;
-    width: 250px !important;
+.btn-clipboard {
+    position: relative;
+    right: 51px;
+    border-radius: 0 4px 0 4px;
+}
+
+.zeroclipboard-is-hover {
+    color: #fff;
+    border-color: #563d7c;
+    background-color: #563d7c;
 }
