@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>EMILVOOO || PogoNameGenerator</title>
+    <title>PogoNameGenerator</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
@@ -15,9 +15,9 @@
     <nav class="navbar navbar-inverse marg-bot">
         <div class="container">
             <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">&#9776;</button>
-            <a class="hidden-sm-up menu" href="/">EMILVOOO</a>
+            <a class="hidden-sm-up menu" href="/">PogoNameGenerator</a>
             <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
-                <a class="navbar-brand hidden-xs-down" href="/"><b>EMILVOOO</b></a>
+                <a class="navbar-brand hidden-xs-down" href="/"><b>PogoNameGenerator</b></a>
                 <ul class="nav navbar-nav">
                     <!--<li class="nav-item"><a href="/test/test">Home</a></li>-->
                 </ul>
@@ -25,7 +25,7 @@
         </div>
     </nav>
     <div class="container">
-        <h4 class="panel-title-heading">PogoNameGenerator</h4>
+        <p>Generate Pokémon Go nicknames to use for botting!</p>
         <form method="post">
             <div class="form-group">
                 <textarea class="form-control" id="textarea-name" name="name" style="height: 350px;">
