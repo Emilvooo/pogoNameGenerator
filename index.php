@@ -25,7 +25,7 @@
         </div>
     </nav>
     <div class="container">
-        <p>Generate Pokémon Go nicknames to use for botting!</p>
+        <p>Bulk generate Pokémon Go nicknames to use for botting!</p>
         <form method="post">
             <div class="form-group">
                 <textarea class="form-control" id="textarea-name" name="name" style="height: 350px;">
