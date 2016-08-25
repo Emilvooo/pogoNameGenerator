@@ -1,0 +1,13 @@
+.form-control:focus {
+    border-color: #3498db;
+}
+
+.panel-title-heading {
+    padding: 0 0 20px 0 !important;
+}
+
+.img-thumbnail {
+    margin-right: 10px !important;
+    height: 150px !important;
+    width: 250px !important;
+}
