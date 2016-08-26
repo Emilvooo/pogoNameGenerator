@@ -35,7 +35,7 @@
                     </button>
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" id="randomnick" name="randomnick" value="yes"> Generate random nicknames?
+                            <input type="checkbox" id="randomnick" name="randomnick"> Generate random nicknames?
                         </label>
                     </div>
                     <div id="form-randomnick" class="form-group" style="display: none;">
@@ -44,7 +44,7 @@
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" id="randomcheck" name="randomcheck" value="yes"> Generate random string behind nicknames?
+                            <input type="checkbox" id="randomcheck" name="randomcheck"> Generate random string behind nicknames?
                         </label>
                     </div>
                     <div id="form-randomcheck" class="form-group" style="display: none;">
@@ -53,16 +53,16 @@
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" id="passcheck" name="passcheck" value="yes"> Should we add a password behind the username?
+                            <input type="checkbox" id="passcheck" name="passcheck" value=":"> Should we add a password behind the username?
                         </label>
                     </div>
                     <div id="form-passcheck" class="form-group" style="display: none;">
                         <label for="exampleInputPassword1">Password?</label>
-                        <input type="text" id="input-pass" class="form-control" name="password">
+                        <input type="text" id="input-pass" class="form-control" name="password" value=":">
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" name="comma" value="yes"> Add a comma to the end of every line?
+                            <input type="checkbox" name="comma" value=","> Add a comma to the end of every line?
                         </label>
                     </div>
                     <button type="submit" id="btn-submit" name="submit" class="btn btn-primary">
