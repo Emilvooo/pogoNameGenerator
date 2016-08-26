@@ -62,11 +62,16 @@
                     </div>
                     <div id="form-passcheck" class="form-group" style="display: none;">
                         <label for="exampleInputPassword1">Password?</label>
-                        <input type="text" id="input-pass" class="form-control" name="password">
+                        <input type="text" id="input-pass" class="form-control" name="password" value=":">
                     </div>
                     <div class="checkbox">
                         <label>
                             <input type="checkbox" name="comma" value=","> Add a comma to the end of every line?
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="convert"> Convert : and , to ; ?
                         </label>
                     </div>
                     <button type="submit" id="btn-submit" name="submit" class="btn btn-primary">

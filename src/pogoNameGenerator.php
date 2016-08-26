@@ -21,15 +21,19 @@ class pogoNameGenerator
         }
         if ($this->getPost('randomcheck'))
         {
-            $this->addRandomString();
+            $this->addToNames(null);
         }
         if ($this->getPost('passcheck'))
         {
-            $this->addPassword();
+            $this->addToNames($this->getPost('password'));
         }
         if ($this->getPost('comma'))
         {
-            $this->addComma();
+            $this->addToNames($this->getPost('comma'));
+        }
+        if ($this->getPost('convert'))
+        {
+            $this->convertNames();
         }
     }
 
@@ -52,39 +56,27 @@ class pogoNameGenerator
         $this->names = preg_split('/\n|\r/', $random_nickname, -1, PREG_SPLIT_NO_EMPTY);
     }
 
-    private function addRandomString()
+    private function convertNames()
     {
-        $add_string = $this->addToNames(false, 'generateRandomString', true);
-        $this->names = $add_string;
+        $convert_names = str_replace(array(':', ','), array(';', ''), $this->names);
+        $this->names = $convert_names;
     }
 
-    private function addPassword()
+    private function addToNames($value)
     {
-        $add_password = $this->addToNames(':'.$this->getPost('password'), false, false);
-        $this->names = $add_password;
-    }
-
-    private function addComma()
-    {
-        $add_comma = $this->addToNames($this->getPost('comma'), false, false);
-        $this->names = $add_comma;
-    }
-
-    private function generateRandomString()
-    {
-        $string_shuffle = substr(str_shuffle('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'), 0, $this->getPost('quantity-string'));
-        return $string_shuffle;
-    }
-
-    private function addToNames($value, $function, $preg_replace_callback)
-    {
-        if ($function && $preg_replace_callback  == true)
+        if ($value == null)
         {
-            return preg_replace_callback('/$/', function() use(&$function) { return $this->$function(); }, $this->names);
+            foreach ($this->names as &$name)
+            {
+                $name = trim($name) . substr(str_shuffle('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'), 0, 3);
+            }
         }
         else
         {
-            return preg_replace('/$/', $value, $this->names);
+            foreach ($this->names as &$name)
+            {
+                $name = trim($name) . $value;
+            }
         }
     }
 
