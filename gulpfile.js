@@ -30,8 +30,7 @@ gulp.task('clean:dist', function() {
 });
 
 gulp.task('build', function (callback) {
-    runSequence('clean:dist',
-        ['useref', 'images'],
+    runSequence(['useref', 'images'],
         callback
     )
 });

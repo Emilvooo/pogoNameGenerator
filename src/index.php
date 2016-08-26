@@ -18,7 +18,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h3>pogoNameGenerator</h3>
+                <h3><a href="/"> pogoNameGenerator</a></h3>
                 <p class="lead">Bulk generate Pokémon Go nicknames to use for botting!</p>
                 <form method="post">
                     <div class="form-group">
