@@ -49,34 +49,25 @@ class pogoNameGenerator
 
     private function addRandomString()
     {
-        $add_string = array_map(function($val)
-        {
-            return $val . $this->generateRandomString($this->getPost('quantity-string'));
-        }, $this->names);
+        $add_string = preg_replace_callback('/$/', function(){ return $this->generateRandomString(); }, $this->names);
         $this->names = $add_string;
     }
 
     private function addPassword()
     {
-        $add_password = array_map(function($val)
-        {
-            return $val . ':' . $this->getPost('password');
-        }, $this->names);
+        $add_password = preg_replace('/$/', ':'.$this->getPost('password'), $this->names);
         $this->names = $add_password;
     }
 
     private function addComma()
     {
-        $add_comma = array_map(function($val)
-        {
-            return $val . ',';
-        }, $this->names);
+        $add_comma = preg_replace('/$/', ',', $this->names);
         $this->names = $add_comma;
     }
 
-    private function generateRandomString($quantity)
+    private function generateRandomString()
     {
-        $string_shuffle = substr(str_shuffle('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'), 0, $quantity);
+        $string_shuffle = substr(str_shuffle('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'), 0, $this->getPost('quantity-string'));
         return $string_shuffle;
     }
 
