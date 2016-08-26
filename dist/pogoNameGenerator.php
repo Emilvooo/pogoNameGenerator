@@ -60,7 +60,7 @@ class pogoNameGenerator
 
     private function addPassword()
     {
-        $add_password = $this->addToNames($this->getPost('password'), false, false);
+        $add_password = $this->addToNames(':'.$this->getPost('password'), false, false);
         $this->names = $add_password;
     }
 
@@ -78,7 +78,7 @@ class pogoNameGenerator
 
     private function addToNames($value, $function, $preg_replace_callback)
     {
-        if ($preg_replace_callback == true)
+        if ($function && $preg_replace_callback  == true)
         {
             return preg_replace_callback('/$/', function() use(&$function) { return $this->$function(); }, $this->names);
         }

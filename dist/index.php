@@ -53,12 +53,12 @@
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" id="passcheck" name="passcheck" value=":"> Should we add a password behind the username?
+                            <input type="checkbox" id="passcheck" name="passcheck"> Should we add a password behind the username?
                         </label>
                     </div>
                     <div id="form-passcheck" class="form-group" style="display: none;">
                         <label for="exampleInputPassword1">Password?</label>
-                        <input type="text" id="input-pass" class="form-control" name="password" value=":">
+                        <input type="text" id="input-pass" class="form-control" name="password">
                     </div>
                     <div class="checkbox">
                         <label>
